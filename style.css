@@ -26,15 +26,21 @@
     nav {
       width: 100%;
       background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
-      display: flex;
-justify-content: left;
-      align-items: left;
+     flex-direction: row;
+   justify-content: space-between;
+      align-items: normal;
       padding: 10px 20px;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 10;
    
+    }
+    nav a{
+      text-decoration: none;
+      color: white;
+      justify-content: space-between;
+      font-weight: bold;
     }
 
     nav .logo {
@@ -46,14 +52,16 @@ justify-content: left;
     nav ul {
       list-style: none;
       display: flex;
+      text-decoration: solid;
     }
 
     nav ul li {
       margin-left: 15px;
+      
     }
 
     nav ul li a {
-      color: #fff;
+      
       text-decoration: none;
       font-size: 16px;
       transition: color 0.3s;
