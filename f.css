@@ -1,16 +1,6 @@
 
- nav {
-      width: 100%;
-      background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
-     flex-direction: row;
-   justify-content: space-between;
-      align-items: normal;
-      padding: 10px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
- }
+
+ 
 
   
     nav a{
@@ -18,6 +8,7 @@
       color: white;
       justify-content: space-between;
       font-weight: bold;
+      color: #4CAF50;
     }
 .dropdown {
     margin-bottom: 15px;
