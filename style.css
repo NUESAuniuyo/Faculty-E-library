@@ -72,9 +72,10 @@
     
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
       nav ul {
         display: none;
+        width: 100%;
       }}
    /* .welcome-text {
       position: absolute;
