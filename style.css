@@ -85,10 +85,10 @@
       transform: translate(-50%, -50%);
       color: green;
       text-align: center;
-      background: rgba(255, 255, 255, 0.6);
+ 
       padding: 20px;
       border-radius: 10px;
-        position: fixed;
+      position: fixed;
     }
 
     .welcome-text h1 {
@@ -100,7 +100,7 @@
   
     .welcome-text h2 {
       font-size: 30px;
-      -webkit-text-stroke: 3px white;
+
       align-items: center;
      }
 
