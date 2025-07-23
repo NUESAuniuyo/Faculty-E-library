@@ -71,6 +71,11 @@
       color: #ffd700; /* gold on hover */
     
     }
+
+    @media (max-width: 600px) {
+      nav ul {
+        display: none;
+      }}
    /* .welcome-text {
       position: absolute;
       top: 50%;
@@ -92,10 +97,7 @@
       font-size: 16px;
     }
 
-    @media (max-width: 600px) {
-      nav ul {
-        display: none;
-      }
+    
 
       .welcome-text h1 {
         font-size: 20px;
