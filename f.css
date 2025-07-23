@@ -1,9 +1,4 @@
-
-
- 
-
-  
-    nav a{
+ nav a{
       text-decoration: none;
       color: white;
       justify-content: space-between;
@@ -160,7 +155,7 @@ header nav a:hover {
 
 .headings h1 {
   margin-left: 10px;
-    font-size: 50px;
+    font-size: 40px;
 -webkit-text-stroke: 3px white;
 
 }
