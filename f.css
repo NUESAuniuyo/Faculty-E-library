@@ -1,4 +1,24 @@
 
+ nav {
+      width: 100%;
+      background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
+     flex-direction: row;
+   justify-content: space-between;
+      align-items: normal;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+ }
+
+  
+    nav a{
+      text-decoration: none;
+      color: white;
+      justify-content: space-between;
+      font-weight: bold;
+    }
 .dropdown {
     margin-bottom: 15px;
     color: green
@@ -82,7 +102,7 @@ body {
 
 header {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color:white;
   color: green;
 
@@ -94,6 +114,7 @@ header {
 .logo-container img{
   width: 100px;
   height: 100px;
+  padding-bottom: 10px;
 }
 
 section{
@@ -146,17 +167,18 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-.main.title {
+.headings h1 {
   margin-left: 10px;
-  font-size: 2.0em;
+    font-size: 50px;
+-webkit-text-stroke: 3px white;
 
 }
 
-.subtitle {
+.headings h3{
   font-style: italic;
   text-align: center;
-  /* margin-top: 5px; */
-  font-size: 1.5em;
+ font-size: 20px;
+margin-top: 10px;
 }
 
 /* Course Container Styles */
