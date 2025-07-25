@@ -23,8 +23,8 @@
       width: 100%;
       background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
      flex-direction: row;
-   justify-content: space-between;
-      align-items: normal;
+  justify-content: space-around;
+  align-content: normal;
       padding: 10px 20px;
       position: fixed;
       top: 0;
@@ -89,7 +89,7 @@
     .welcome-text h1 {
     font-size: 100px;
      margin-bottom: 0px;
-   -webkit-text-stroke: 3px white;
+
    align-content: center;
     }
   
