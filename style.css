@@ -63,9 +63,9 @@ nav ul li a:hover {
 }
 
 @media (max-width: 600px) {
-  nav ul {
-    display: none;
-    width: 100%;
+  .welcome-container {
+    background-size: contain;
+    background-position: center;
   }
 }
 
