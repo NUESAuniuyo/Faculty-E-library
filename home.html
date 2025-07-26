@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
   <meta charset="UTF-8"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
-  <title>UNIUYO NUESA E-LIBRARY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NUESA UNIUYO E-LIBRARY</title>
+ <link rel="icon" type="image/png" href="../../../logo/faculty.png">
+  <link rel="stylesheet" href="f.css"/>
+       <nav>
+<a href="index.html">WELCOME PAGE</a>
+</nav>
+
 </head>
 <body>
-  <div class="welcome-container">
-    <nav>
-      <span class="logo">NUESA E-LIBRARY</span>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </nav>
-    <div class="welcome-text">
-      <h1>WELCOME TO</h1>
-      <h2>UNIUYO NUESA E-LIBRARY</h2>
-      <h3>Making learning easy...</h3>
-      <br>
-      <a href="home.html"><button>Visit Library</button></a>
+  <header id="header">
+    <div class="logo-container">
+      <img src="logo/faculty.png" alt="Faculty of Engineering Logo"/>
     </div>
-  </div>
+<div class="headings">
+  <h1>NUESA UNIUYO E-LIBRARY</h1>
+  <h3>Making learning easy</h3>
+</div>
+
+</header>
+
+<div>
+  <main>
+    <h2>Access Materials</h2>
+    <form id="redirectForm">
+      <div class="dropdown">
+        <label for="semester">Select Semester:</label>
+        <select id="semester" name="semester" required>
+          <option value="" disabled selected>Choose Semester</option>
+          <option value="first">First Semester</option>
+          <option value="second">Second Semester</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <label for="level">Select Level:</label>
+        <select id="level" name="level" required>
+          <option value="" disabled selected>Choose Level</option>
+          <option value="100">100 Level</option>
+          <option value="200">200 Level</option>
+          <option value="300">300 Level</option>
+          <option value="400">400 Level</option>
+          <option value="500">500 Level</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <label for="department">Select Department:</label>
+        <select id="department" name="department" required>
+          <option value="" disabled selected>Choose Department</option>
+          <option value="mechanical">Mechanical Engineering</option>
+          <option value="computer">Computer Engineering</option>
+          <option value="civil">Civil Engineering</option>
+          <option value="agric">Agricultural Engineering</option>
+          <option value="chemical">Chemical Engineering</option>
+          <option value="food">Food Engineering</option>
+          <option value="electrical">Electrical Engineering</option>
+          <option value="petroleum">Petroleum Engineering</option>
+        </select>
+        <button type="submit" class="btn">Access Materials</button>
+      </div>
+
+    
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; Designed by Favour Tony ×× James, Anietie (SMNSE)</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
