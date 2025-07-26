@@ -1,114 +1,106 @@
-  
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .welcome-container {
-      background: url('nuesa.png') no-repeat center center/cover;
-      height: 100vh;
-      background-size: auto;
-      width: 100%;
-      position: relative;
-      opacity: 0;
-      animation: fadeIn 5s forwards;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    nav {
-      width: 100%;
-      background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
-     flex-direction: row;
-  justify-content: space-around;
-  align-content: normal;
-      padding: 10px 20px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 10;
-   
-    }
-    nav a{
-      text-decoration: none;
-      color: white;
-      justify-content: space-between;
-      font-weight: bold;
-    }
-
-    nav .logo {
-      color: #fff;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      text-decoration: solid;
-    }
-
-    nav ul li {
-      margin-left: 15px;
-      
-    }
-
-    nav ul li a {
-      
-      text-decoration: none;
-      font-size: 16px;
-      transition: color 0.3s;
-   }
-
-    nav ul li a:hover {
-      color: #ffd700; /* gold on hover */
-    
-    }
-
-    @media (max-width: 060px) {
-      nav ul {
-        display: none;
-        width: 100%;
-      }}
-   .welcome-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: green;
-      text-align: center;
- 
-      padding: 20px;
-      border-radius: 10px;
-      position: fixed;
-    }
-
-    .welcome-text h1 {
-    font-size: 100px;
-     margin-bottom: 0px;
-
-   align-content: center;
-    }
-  
-    .welcome-text h2 {
-      font-size: 30px;
-
-      align-items: center;
-     }
-
-    .welcome-text h3 {
-      font-size: 10px;
-     font-style: italic;
-     align-content: center;
-    }
-
-.welcome-text button{
-  padding-bottom: 5px;
-  color: green;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-  
+.welcome-container {
+  background: url('nuesa.png') no-repeat center center/cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+nav {
+  width: 100%;
+  background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav .logo {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffd700; /* gold on hover */
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    display: none;
+    width: 100%;
+  }
+}
+
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.welcome-text h1 {
+  font-size: 100px;
+  margin-bottom: 0px;
+}
+
+.welcome-text h2 {
+  font-size: 30px;
+}
+
+.welcome-text h3 {
+  font-size: 10px;
+  font-style: italic;
+}
+
+.welcome-text button {
+  padding: 5px 20px;
+  color: green;
+  font-weight: bold;
+  border: 2px solid green;
+  border-radius: 5px;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
