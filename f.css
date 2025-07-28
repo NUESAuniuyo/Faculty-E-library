@@ -133,18 +133,31 @@ header nav a:hover {
   text-decoration: underline;
 }
 
+
+
+.headings {
+  padding: 20px 0 10px 0; /* Less bottom padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns h1 closer to logo if logo is above or beside */
+}
+
+
 .headings h1 {
-  margin-left: 10px;
+  margin: 0 0 5px 10px; /* Top margin 0, bottom margin 5px, left margin for indent */
   font-size: 40px;
-  -webkit-text-stroke: 3px white;
 }
 
 .headings h3 {
   font-style: italic;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
+  text-align: left;
+  font-size: 15px;
+  margin: 0 0 0 12px; /* No top margin, left margin for alignment, closer to h1 */
 }
+
+
+
+
 
 /* Course Container Styles */
 .courses-container {
