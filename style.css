@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  padding-top: 90px; /* Space for fixed nav */
+  padding-top: 75px; /* Space for fixed nav */
 }
 
 /* Image Side Styles */
@@ -19,11 +19,13 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background-size: 60% auto !important; /* Reduced from contain to 25% */
+  background-size: 80% auto !important; /* Reduced from contain to 25% */
   background-position: center;
   background-repeat: no-repeat;
   transition: all 1s ease-in-out;
-  animation: fadeIn 5s forwards;
+  animation: fadeIn 10s forwards;
+  background-blend-mode: normal;
+  background-clip: border-box;
 }
 
 /* Welcome Text Styles */
