@@ -11,7 +11,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  padding-top: 75px; /* Space for fixed nav */
+  padding-top: 90px; /* Space for fixed nav */
 }
 
 /* Image Side Styles */
