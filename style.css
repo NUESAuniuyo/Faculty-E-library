@@ -4,123 +4,190 @@
   box-sizing: border-box;
 }
 
+/* Main Container */
 .welcome-container {
- height: 100vh;
-width: 100%;
-  position: relative;
-  opacity: 0;
-  animation: fadeIn 5s forwards;
-  background-size: contain;      /* Ensures the logo fits and is not too big */
-  background-size: 18% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-  padding: 0px;
-background: transparent;
-
-}
-
-@keyframes fadeIn {
-  to { opacity: 2; }
-}
-
-nav {
+  height: 100vh;
   width: 100%;
-  background: rgba(0, 128, 0, 0.8); /* semi-transparent green */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  padding-top: 75px; /* Space for fixed nav */
 }
 
-
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+/* Image Side Styles */
+.image-side {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-size: 60% auto !important; /* Reduced from contain to 25% */
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1s ease-in-out;
+  animation: fadeIn 5s forwards;
 }
 
-nav .logo {
-  color: #fff;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ffd700; /* gold on hover */
-}
-
-@media (max-width: 600px) {
-  .welcome-container {
-    background-size: 30% auto;
-    background-position: center;
-    padding-top: 50px;
-  }
-  .welcome-text h1 {
-    font-size: 40px;
-  }
-  .welcome-text h2 {
-    font-size: 20px;
-  }
-  .welcome-text h3 {
-    font-size: 12px;
-  }
-}
-
+/* Welcome Text Styles */
 .welcome-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: green;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
-  border-radius: 10px;
+  background: white;
+  position: relative;
+  z-index: 2;
 }
 
 .welcome-text h1 {
-  font-size: 70px;
-  margin-bottom: 0px;
+  font-size: 60px;
+  color: green;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .welcome-text h2 {
   font-size: 30px;
+  color: green;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .welcome-text h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-style: italic;
+  color: green;
+  text-align: center;
 }
 
 .welcome-text button {
-  padding: 5px 20px;
-  color: green;
-  font-weight: bold;
+  margin-top: 30px;
+  padding: 10px 30px;
+  background: transparent;
   border: 2px solid green;
-  border-radius: 5px;
-  background: #fff;
+  color: green;
   cursor: pointer;
-  margin-top: 10px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.welcome-text button:hover {
+  background: green;
+  color: white;
+}
+
+/* Navigation Styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 128, 0, 0.9);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 128, 0, 0.9);
+  padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+  }
+
+.welcome-text h1 {
+    font-size: 40px;
+  }
+  
+  .welcome-text h2 {
+    font-size: 24px;
+  }
+
+  .welcome-text h3 {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .mobile-nav {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+   .image-side {
+    background-size: 10% auto; /* Reduced from 50% to 35% for mobile */
+  }
+  
 }
