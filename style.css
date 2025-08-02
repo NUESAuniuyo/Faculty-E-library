@@ -89,6 +89,65 @@ body {
 .nav-links a:hover {
   color: var(--accent-color);
 }
+.welcome-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+}
+
+footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.welcome-text h1 {
+  font-size: 60px;
+  margin-bottom: 1.5rem; /* Increased spacing between h1 and h2 */
+  color: green; /* Fixed capitalization of variable name */
+  font-weight: 600;
+}
+
+.welcome-text h2 {
+  font-size: 20px; /* Increased size for better hierarchy */
+  margin-bottom: 0.5rem; /* Reduced space between h2 and h3 */
+  color: var(--secondary-color);
+  font-weight: 300; /* Increased weight for better readability */
+}
+
+.welcome-text h3 {
+  font-style: italic;
+  font-size: 12px; /* Reduced size */
+  color: var(--secondary-color);
+  margin-top: 0.1rem; /* Closer to h2 */
+  text-align: center; /* Center aligned like other text */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .welcome-text h1 {
+    font-size: 40px;
+    margin-bottom: 2rem;
+  }
+
+  .welcome-text h2 {
+    font-size: 30px;
+  }
+
+  .welcome-text h3 {
+    font-size: 10px;
+  }
+}
+
 /* Slideshow Styles */
 .hero-section {
   position: relative;
@@ -99,6 +158,20 @@ body {
   gap: 2rem;
   padding: 2rem;
 }
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-section > :first-child {
+  order: 2; /* move first child to the right */
+}
+
+.hero-section > :last-child {
+  order: 1; /* move last child to the left */
+}
+
 
 .slideshow-container {
   position: relative; /* Changed from absolute */
@@ -154,60 +227,3 @@ body {
   }
 }
 /* Welcome Text Styles */
-.welcome-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 3rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-}
-
-footer {
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-}
-
-.welcome-text h1 {
-  font-size: 60px;
-  margin-bottom: 1.5rem; /* Increased spacing between h1 and h2 */
-  color: green; /* Fixed capitalization of variable name */
-  font-weight: 600;
-}
-
-.welcome-text h2 {
-  font-size: 35px; /* Increased size for better hierarchy */
-  margin-bottom: 0.5rem; /* Reduced space between h2 and h3 */
-  color: var(--secondary-color);
-  font-weight: 500; /* Increased weight for better readability */
-}
-
-.welcome-text h3 {
-  font-style: italic;
-  font-size: 12px; /* Reduced size */
-  color: var(--secondary-color);
-  margin-top: 0.1rem; /* Closer to h2 */
-  text-align: center; /* Center aligned like other text */
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .welcome-text h1 {
-    font-size: 40px;
-    margin-bottom: 2rem;
-  }
-
-  .welcome-text h2 {
-    font-size: 30px;
-  }
-
-  .welcome-text h3 {
-    font-size: 10px;
-  }
-}
