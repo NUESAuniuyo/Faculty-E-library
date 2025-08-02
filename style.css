@@ -121,7 +121,7 @@ footer {
   font-size: 20px; /* Increased size for better hierarchy */
   margin-bottom: 0.5rem; /* Reduced space between h2 and h3 */
   color: var(--secondary-color);
-  font-weight: 300; /* Increased weight for better readability */
+  font-weight: 500; /* Increased weight for better readability */
 }
 
 .welcome-text h3 {
