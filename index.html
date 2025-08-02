@@ -2,47 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <title>UNIUYO NUESA E-LIBRARY</title>
 </head>
 <body>
-  <div class="welcome-container">
-    <nav>
-      <span class="logo">NUESA E-LIBRARY</span>
-      <!-- Desktop Navigation -->
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-      
-      <!-- Hamburger Menu -->
-      <div class="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <!-- Mobile Navigation Menu -->
-        <div class="mobile-nav">
-          <ul>
+  <header>
+    <div class="top-bar">
+      <div class="logo-container">
+        <img src="logo/faculty.png" alt="NUESA Logo" class="logo-img">
+        <div class="logo-text">
+          <h1>NUESA E-LIBRARY</h1>
+          <p>University of Uyo</p>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <div class="nav-container">
+          <ul class="nav-links">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
           </ul>
+          
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-section">
+      <div class="slideshow-container">
+        <!-- Slides -->
+        <div class="slide fade">
+          <img src="logo/Agric.jpg" alt="Agricultural Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/Chem.jpg" alt="Chemical Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/civil.png" alt="Civil Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/elect.png" alt="Electrical Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/food.jpg" alt="Food Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/pet.jpeg" alt="Petroleum Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/im.png" alt="Mechanical Engineering">
+        </div>
+        <div class="slide fade">
+          <img src="logo/faculty building 2.png" alt="faculty building Side view">
+        </div>
+        <div class="slide fade">
+          <img src="logo/faculty building.png" alt="Faculty Building Front view">
+        </div>
+        
+        <!-- Navigation dots -->
+        <div class="dots-container">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
-    </nav>
 
-    <div class="welcome-text">
-      <h1>WELCOME TO</h1>
-      <h2>UNIUYO NUESA E-LIBRARY</h2>
-      <h3>Making learning easy...</h3>
-      <a href="home.html"><button>Visit Library</button></a>
+      <div class="welcome-text">
+        <h1>WELCOME TO</h1>
+        <h2>NUESA UNIUYO E-LIBRARY</h2>
+        <h3>Making learning easy...</h3>
+        <a href="home.html"><button>Visit Library</button></a>
+      </div>
     </div>
-    
-    <div class="image-side"></div>
-  </div>
+  </main>
 
-  <script type="module" src="welcome.js"></script>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 NUESA E-Library. All rights reserved.</p>
+      <p>Designed by Favour Tony × James, Anietie (SMNSE)</p>
+    </div>
+  </footer>
+
+  <script src="welcome.js"></script>
 </body>
 </html>

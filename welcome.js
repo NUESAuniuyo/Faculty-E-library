@@ -1,3 +1,4 @@
+// Hamburger Menu functionality
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -6,35 +7,49 @@ hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
 });
 
-const images = [
-  'logo/Agric.jpg',
-  'logo/Chem.jpg',
-  'logo/Civil.png',
-  'logo/Com.png',
-  'logo/Elect.png',
-  'logo/im.png',
-   'logo/pet.jpeg',
-  'logo/faculty building.png',
-  'logo/faculty.png',
-];
+// Close menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+  });
+});
 
-let current = 0;
-const imageSide = document.querySelector('.image-side');
+// Slideshow functionality
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
 
-function changeBackground() {
-  imageSide.style.opacity = '0';
+function showSlide(n) {
+  // Remove active class from all slides and dots
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
   
-  setTimeout(() => {
-    imageSide.style.background = `url('${images[current]}') no-repeat center center`;
-    imageSide.style.backgroundSize = 'cover';
-    imageSide.style.opacity = '1';
-    current = (current + 1) % images.length;
-  }, 1000);
+  // Show current slide and dot
+  slides[n].classList.add('active');
+  dots[n].classList.add('active');
 }
 
-// Initial background
-imageSide.style.transition = 'opacity 1s ease-in-out';
-changeBackground();
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
 
-// Change every 5 seconds
-setInterval(changeBackground, 5000);
+// Add click events to dots
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentSlide = index;
+    showSlide(currentSlide);
+  });
+});
+
+// Initialize slideshow
+function initSlideshow() {
+  // Show first slide
+  showSlide(0);
+  // Auto advance slides every 5 seconds
+  setInterval(nextSlide, 5000);
+}
+
+// Wait for DOM to load before initializing
+document.addEventListener('DOMContentLoaded', initSlideshow);
