@@ -156,8 +156,13 @@ header nav a:hover {
 }
 
 
-
-
+.btn{
+  background-color: #4CAF50;
+  color: white;
+}
+.btn a:hover {
+  color: yellow;
+}
 
 /* Course Container Styles */
 .courses-container {
