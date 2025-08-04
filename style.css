@@ -180,7 +180,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
- background-color: #4CAF50;
+ /* background-color: #4CAF50; */
   border-radius: 10px;
   overflow: hidden;
 }
@@ -206,6 +206,12 @@ footer {
   object-fit: contain;
   border-radius: 8px;
 }
+
+.slide.white {
+  background-color: white;
+  opacity: 0.8;
+}
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
