@@ -48,7 +48,7 @@ function initSlideshow() {
   // Show first slide
   showSlide(0);
   // Auto advance slides every 5 seconds
-  setInterval(nextSlide, 5000);
+  setInterval(nextSlide, 2000);
 }
 
 // Wait for DOM to load before initializing
