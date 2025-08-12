@@ -1,51 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NUESA UNIUYO E-LIBRARY - A Resource Hub for Faculty Engineering Students">
-    <title>About Us - NUESA UNIUYO E-LIBRARY</title>
-    <link rel="stylesheet" href="about.css">  
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NUESA UNIUYO E-LIBRARY - A Resource Hub for Faculty Engineering Students">
+  <title>About Us - NUESA UNIUYO E-LIBRARY</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 </head>
-<body>
-<!-- Introduction Section -->
-    <section id="introduction">
-        <h2> WELCOME TO NUESA UNIUYO E-LIBRARY</h2>
-        <p>NUESA UNIUYO E-LIBRARY is a web-based platform designed to provide engineering students and faculty
-    members with easy access to a vast collection of textbooks and academic materials. 
-The website organizes resources by using course code, allowing users to quickly find the books they need for their studies and research.
-</p>
-    </section>
-<!-- Our Story Section -->
-    <section id="our-story">
-        <h2>Our Story</h2>
-        <p>Founded by Favour Tony in collaboration with the Office of the Director of Academics, NUESA with the vision of simplifying academic learning, NUESA UNIUYO E-LIBRARY started as an initiative to help students easily access educational materials. 
-            With the rapid advancement of technology and the growing demand for engineers in Engineering industries, 
-            we recognized the need for a centralized resource that students could rely on for their academic success. Since its inception, 
-            we've grown into a platform that empower students to enhance their learning experience by providing them with valuable tools and knowledge.</p>
-    </section>
-    
-    <section id="features">
-  <p><h2>Features</h2>
-    <ul>
-        <li><strong>Course-Based Navigation:</strong> Users can browse and search textbooks based on course codes.</li>
-        <li><strong>User-Friendly Interface:</strong> Designed with a simple and responsive UI using HTML and CSS.</li>
-    </ul>
- </section>
-    <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:anthonyetimfavour@gmail.com">support@anthonyetimfavour.com</a>
-        or call: 09168721123
+<body class="bg-white font-[Montserrat] text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center gap-4">
+        <img src="logo/faculty.png" alt="NUESA Logo" class="w-16 h-auto">
+        <div class="text-green-700">
+          <h1 class="text-lg font-bold">NUESA E-LIBRARY</h1>
+          <p class="text-sm">University of Uyo</p>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="relative">
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 text-green-700 font-medium">
+          <li><a href="index.html" class="hover:text-yellow-400">Welcome Page</a></li>
+          <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
+        </ul>
+
+        <!-- Mobile Menu Icon -->
+        <div id="menu-btn" class="md:hidden text-green-700 text-2xl cursor-pointer">
+          <i class="fa fa-bars"></i>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <ul id="mobile-menu" class="absolute right-0 mt-2 w-40 bg-white shadow-lg rounded hidden flex-col text-green-700 font-medium md:hidden">
+          <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Welcome</a></li>
+          <li><a href="home.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Introduction -->
+  <section class="max-w-4xl mx-auto my-6 p-6 bg-white rounded-lg shadow">
+    <h2 class="text-green-700 text-2xl font-bold mb-4">WELCOME TO NUESA UNIUYO E-LIBRARY</h2>
+    <p>
+      NUESA UNIUYO E-LIBRARY is a web-based platform designed to provide engineering students and faculty members 
+      with easy access to a vast collection of textbooks and academic materials. 
+      The website organizes resources by course code, allowing users to quickly find the books they need for their studies and research.
     </p>
-        
-    </section>
-     
-    <section id="Founder">
-                <h3> FOUNDED AND MANAGED BY:</h3>
-        <P>Favour Tony a student of Mechanical and Aerospace Engineering Department Faculty of Engineering </P>
-                <p> NUESA UNIUYO E-LIBRARY is passionate about educational technology and dedicated to enhancing learning experiences for students worldwide.</p>
-            </div>
-             
-    
-    </section>
-<body/>
+  </section>
+
+  <!-- Our Story -->
+  <section class="max-w-4xl mx-auto my-6 p-6 bg-white rounded-lg shadow">
+    <h2 class="text-green-700 text-2xl font-bold mb-4">Our Story</h2>
+    <p>
+      Founded by Favour Tony in collaboration with the Office of the Director of Academics, NUESA, with the vision of simplifying academic learning, 
+      NUESA UNIUYO E-LIBRARY started as an initiative to help students easily access educational materials. 
+      With the rapid advancement of technology and the growing demand for engineers in the industry, 
+      we recognized the need for a centralized resource that students could rely on for their academic success. 
+      Since its inception, we've grown into a platform that empowers students to enhance their learning experience.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section class="max-w-4xl mx-auto my-6 p-6 bg-white rounded-lg shadow">
+    <h2 class="text-green-700 text-2xl font-bold mb-4">Features</h2>
+    <ul class="list-disc ml-6 space-y-2">
+      <li><strong>Course-Based Navigation:</strong> Users can browse and search textbooks based on course codes.</li>
+      <li><strong>User-Friendly Interface:</strong> Designed with a simple and responsive UI using HTML and Tailwindcss.</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section class="max-w-4xl mx-auto my-6 p-6 bg-white rounded-lg shadow">
+    <h2 class="text-green-700 text-2xl font-bold mb-4">Contact</h2>
+    <p>Email: <a href="mailto:anthonyetimfavour@gmail.com" class="text-blue-600 hover:underline">support@anthonyetimfavour.com</a></p>
+    <p>Call: 09168721123</p>
+  </section>
+
+  <!-- Founder -->
+  <section class="max-w-4xl mx-auto my-6 p-6 bg-white rounded-lg shadow">
+    <h3 class="text-green-700 text-xl font-bold mb-4">FOUNDED AND MANAGED BY:</h3>
+    <p>Favour Tony, a student of Mechanical and Aerospace Engineering Department, Faculty of Engineering.</p>
+    <p>NUESA UNIUYO E-LIBRARY is passionate about educational technology and dedicated to enhancing learning experiences for students worldwide.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-green-700 text-white text-center py-4 mt-6">
+    <p>&copy; Designed by Favour Tony ×× James, Anietie (SMNSE)</p>
+  </footer>
+
+  <!-- Script for mobile menu -->
+<script src="script.js"></script>
+</body>
+</html>
