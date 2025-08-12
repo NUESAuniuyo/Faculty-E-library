@@ -23,12 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Toggle menu for #menu-toggle and #mobile-menu
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
+// Toggle Mobile Menu
+  document.getElementById("menu-btn").addEventListener("click", function() {
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+  });
 
   // ========================
   // Slideshow Functionality (No dots)
@@ -56,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[slideIndex - 1].classList.add("opacity-100");
 
     // Change slide every 1 second
-    setTimeout(showSlides, 1000);
+    setTimeout(showSlides, 2000);
   }
 
   // Start slideshow
